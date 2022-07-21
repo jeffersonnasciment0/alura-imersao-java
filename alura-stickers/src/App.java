@@ -35,7 +35,7 @@ public class App {
             double imdbRating = Double.parseDouble(filme.get("imDbRating"));
             System.out.printf("\u001b[1mIMDBRATING:.\t");
             for( int i = 0 ; i < imdbRating ; i++ ){
-                System.out.printf("\u001b[1m\u2B50");
+                System.out.printf(" \u001b[1m\u2B50");
             }
 
             System.out.println();
