@@ -6,6 +6,14 @@
 
 ![GitHub Org's stars](https://img.shields.io/github/stars/jeffersonnasciment0/alura-imersao-java)
 
+## ✔️ Técnicas e tecnologias utilizadas
+
+- ``Java 17``
+- ``visual studio code``
+- ``Paradigma de orientação a objetos``
+
+
 # AULA 01
 Na primeira aula, construimos uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação... Tudo isso sem usar nenhuma biblioteca externa!
+
 ![resultado_aula01](https://user-images.githubusercontent.com/59482366/180106941-32e5f90d-542e-4315-b79a-998adfe82dc0.png)
