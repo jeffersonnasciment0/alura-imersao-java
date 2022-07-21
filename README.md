@@ -17,3 +17,30 @@
 Na primeira aula, construimos uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação... Tudo isso sem usar nenhuma biblioteca externa!
 
 ![resultado_aula01](https://user-images.githubusercontent.com/59482366/180106941-32e5f90d-542e-4315-b79a-998adfe82dc0.png)
+
+#AULA 02
+
+ :construction: Em construção :construction:
+ 
+ #AULA 03
+
+ :construction: Em construção :construction:
+ 
+ #AULA 04
+
+ :construction: Em construção :construction:
+ 
+ #AULA 05
+
+ :construction: Em construção :construction:
+ 
+## 🛠️ Abrir e rodar o projeto
+
+- `Primeiro`: Abra o terminal no local onde deseja executar o projeto
+- `Segundo`: Execute o seguinte comando: git clone https://github.com/jeffersonnasciment0/alura-imersao-java.git
+- `Terceiro`: Execute: cd alura-imersao-java/alura-stickers/src/
+- `Quarto`: Execute: javac App.java
+- `Quinto`: Execute: java App
+
+E pronto ! 
+ 
