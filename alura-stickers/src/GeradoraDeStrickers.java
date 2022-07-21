@@ -2,6 +2,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.awt.Font;
 
 import javax.imageio.ImageIO;
 
@@ -23,8 +24,13 @@ public class GeradoraDeStrickers {
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
         graphics.drawImage(ImagemOriginal, 0, 0, null);
 
+        // Configurar a fonte
+        Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
+        graphics.setFont(fonte);
+
         // 4. Escrever uma frase na nova imagem
-        
+        graphics.drawString("O melhor", 0, novaAltura - 100);
+
         // 5. Escrever a nova imagem em um arquivo
         ImageIO.write(novaImagem, "png", new File("alura-stickers/saida/figurinha.png"));
     }
