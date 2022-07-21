@@ -9,8 +9,8 @@ import java.util.Map;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        // Fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
+        // 1. Fazer uma conexão HTTP e buscar os filmes
+        String url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
@@ -18,16 +18,27 @@ public class App {
         String body = response.body();
         
 
-        // Extrair só os dados que interessam (titulo, poster, classificação)
+        // 2. Extrair só os dados que interessam (titulo, poster, classificação)
         JsonParser parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
         
 
-        // Exibir e manipular os dados
+        // 3. Exibir e manipular os dados
         for (Map<String,String> filme : listaDeFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("imDbRating"));
+            String titulo = filme.get("title");
+            System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", titulo);
+
+            String url_image = filme.get("image");
+            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", url_image);
+
+            String imdbRating1 = filme.get("imDbRating");
+            double imdbRating = Double.parseDouble(filme.get("imDbRating"));
+            System.out.printf("\u001b[1mIMDBRATING:.\t");
+            for( int i = 0 ; i < imdbRating ; i++ ){
+                System.out.printf("\u001b[1m\u2B50");
+            }
+
+            System.out.println();
             System.out.println();
         }
     }
