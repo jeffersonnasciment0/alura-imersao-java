@@ -18,19 +18,19 @@ Na primeira aula, construimos uma aplicação do zero para consumir a API do IMD
 
 ![resultado_aula01](https://user-images.githubusercontent.com/59482366/180106941-32e5f90d-542e-4315-b79a-998adfe82dc0.png)
 
-#AULA 02
+# AULA 02
 
  :construction: Em construção :construction:
  
- #AULA 03
+# AULA 03
 
  :construction: Em construção :construction:
  
- #AULA 04
+# AULA 04
 
  :construction: Em construção :construction:
  
- #AULA 05
+# AULA 05
 
  :construction: Em construção :construction:
  
