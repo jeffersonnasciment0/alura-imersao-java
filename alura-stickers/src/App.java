@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         // 1. Fazer uma conexão HTTP e buscar os filmes
-        String url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
+        String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
