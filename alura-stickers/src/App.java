@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -25,11 +27,21 @@ public class App {
 
         // 3. Exibir e manipular os dados
         for (Map<String,String> filme : listaDeFilmes) {
+
+            String urlImage = filme.get("image");
             String titulo = filme.get("title");
+            InputStream inputStream = new URL(urlImage).openStream();
+
+            String nomeArquivo = titulo + ".png";
+
+            // TODO: Direcionar imagens para um diretório da saída
+            GeradoraDeStrickers geradora = new GeradoraDeStrickers();
+            geradora.create(inputStream, nomeArquivo);
+
+
             System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", titulo);
 
-            String url_image = filme.get("image");
-            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", url_image);
+            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", urlImage);
 
             String imdbRating1 = filme.get("imDbRating");
             double imdbRating = Double.parseDouble(filme.get("imDbRating"));
