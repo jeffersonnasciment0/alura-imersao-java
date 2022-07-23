@@ -22,6 +22,8 @@ Na primeira aula, construimos uma aplicação do zero para consumir a API do IMD
 
 Na segunda aula criamos um gerador de figurinhas explorando outras bibliotecas nativas do Java, para que possamos enviar por Whatsapp os nossos filmes preferidos!
  
+ ![Thor: Love and Thunder](https://user-images.githubusercontent.com/59482366/180611983-22dd9992-370f-4179-a756-b01d443fda44.png)
+ 
 # AULA 03
 
  :construction: Em construção :construction:
