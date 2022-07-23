@@ -21,9 +21,6 @@ Na primeira aula, construimos uma aplicação do zero para consumir a API do IMD
 # AULA 02
 
 Na segunda aula criamos um gerador de figurinhas explorando outras bibliotecas nativas do Java, para que possamos enviar por Whatsapp os nossos filmes preferidos!
-
-![resultado_aula02](https://user-images.githubusercontent.com/59482366/180611836-3ab0b6bf-a2d4-4776-b9c4-b0994ac6b8fb.png)
-
  
 # AULA 03
 
