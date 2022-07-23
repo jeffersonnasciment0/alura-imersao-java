@@ -1,13 +1,11 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 import javax.imageio.ImageIO;
 
 public class GeradoraDeStrickers {
@@ -16,9 +14,6 @@ public class GeradoraDeStrickers {
 
 
         // 1. Ler imagem
-        // InputStream inputStream = new FileInputStream(new File("alura-stickers/entrada/TopMovies_1.jpg"));
-        // InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_1.jpg").openStream();
-
         BufferedImage ImagemOriginal = ImageIO.read(inputStream);
 
         // 2. Criar nova imagem em memória com transparência e com tamanho novo 
@@ -32,15 +27,19 @@ public class GeradoraDeStrickers {
         graphics.drawImage(ImagemOriginal, 0, 0, null);
 
         // Configurar a fonte
-        Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
+        Font fonte = new Font(Font.SANS_SERIF, Font.CENTER_BASELINE, 100);
         graphics.setColor(Color.RED);
         graphics.setFont(fonte);
 
         // 4. Escrever uma frase na nova imagem
-        graphics.drawString("Melhor Filme", 100, novaAltura - 100);
+        String frase = "Massa demais !";
+        int tamanhoFrase = graphics.getFontMetrics().stringWidth(frase);
+        int localFrase = (novaImagem.getWidth() - tamanhoFrase) / 2;
+        graphics.drawString(frase, localFrase, novaAltura - 80);
 
         // 5. Escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
+        String path = "alura-stickers/saida/" + nomeArquivo;
+        ImageIO.write(novaImagem, "png", new File(path));
     }
 
 }

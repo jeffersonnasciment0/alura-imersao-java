@@ -12,7 +12,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         // 1. Fazer uma conexão HTTP e buscar os filmes
-        String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
+        // String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
+        String url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
@@ -34,7 +35,6 @@ public class App {
 
             String nomeArquivo = titulo + ".png";
 
-            // TODO: Direcionar imagens para um diretório da saída
             GeradoraDeStrickers geradora = new GeradoraDeStrickers();
             geradora.create(inputStream, nomeArquivo);
 
@@ -43,14 +43,13 @@ public class App {
 
             System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", urlImage);
 
-            String imdbRating1 = filme.get("imDbRating");
+
             double imdbRating = Double.parseDouble(filme.get("imDbRating"));
             System.out.printf("\u001b[1mIMDBRATING:.\t");
             for( int i = 0 ; i < imdbRating ; i++ ){
                 System.out.printf(" \u001b[1m\u2B50");
             }
 
-            System.out.println();
             System.out.println();
         }
     }
