@@ -1,17 +1,16 @@
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
 import javax.imageio.ImageIO;
 
 public class GeradoraDeStrickers {
     
     void create(InputStream inputStream, String nomeArquivo) throws IOException {
-
 
         // 1. Ler imagem
         BufferedImage ImagemOriginal = ImageIO.read(inputStream);
