@@ -27,7 +27,7 @@ Na segunda aula criamos um gerador de figurinhas explorando outras bibliotecas n
 # AULA 03
 
  :construction: Em construção :construction:
- 
+
 # AULA 04
 
  :construction: Em construção :construction:
