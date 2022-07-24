@@ -31,7 +31,7 @@ public class GeradoraDeStrickers {
         graphics.setFont(fonte);
 
         // 4. Escrever uma frase na nova imagem
-        String frase = "Massa demais !";
+        String frase = "Toopzera";
         int tamanhoFrase = graphics.getFontMetrics().stringWidth(frase);
         int localFrase = (novaImagem.getWidth() - tamanhoFrase) / 2;
         graphics.drawString(frase, localFrase, novaAltura - 80);

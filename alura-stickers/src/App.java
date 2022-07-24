@@ -1,54 +1,38 @@
 import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
         
         // 1. Fazer uma conexão HTTP e buscar os filmes
-        // String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
-        String url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
-        URI endereco = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String body = response.body();
-        
+        // String url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
+        // ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
 
-        // 2. Extrair só os dados que interessam (titulo, poster, classificação)
-        JsonParser parser = new JsonParser();
-        List<Map<String, String>> listaDeFilmes = parser.parse(body);
-        
 
+
+        String url = "https://api.nasa.gov/planetary/apod?api_key=dxy2CsQteqxlZ1Vbvy9ulrM3BHNKgIIUHRfqDcnR&start_date=2022-06-12&end_date=2022-06-14";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+       
+        ClienteHttp http = new ClienteHttp();
+        String json = http.BuscaDados(url);
+        
         // 3. Exibir e manipular os dados
-        for (Map<String,String> filme : listaDeFilmes) {
+        List<Conteudo> conteudos = extrator.extraiConteudos(json);
 
-            String urlImage = filme.get("image");
-            String titulo = filme.get("title");
-            InputStream inputStream = new URL(urlImage).openStream();
+        GeradoraDeStrickers geradora = new GeradoraDeStrickers();
 
-            String nomeArquivo = titulo + ".png";
+        for (Conteudo conteudo : conteudos) {
 
-            GeradoraDeStrickers geradora = new GeradoraDeStrickers();
+            InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
+
+            String nomeArquivo = conteudo.getTitulo() + ".png";
+
             geradora.create(inputStream, nomeArquivo);
 
 
-            System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", titulo);
-
-            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", urlImage);
-
-
-            double imdbRating = Double.parseDouble(filme.get("imDbRating"));
-            System.out.printf("\u001b[1mIMDBRATING:.\t");
-            for( int i = 0 ; i < imdbRating ; i++ ){
-                System.out.printf(" \u001b[1m\u2B50");
-            }
+            System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", conteudo.getTitulo());
+            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", conteudo.getUrlImagem());
 
             System.out.println();
         }
