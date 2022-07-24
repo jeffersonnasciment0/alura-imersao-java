@@ -26,7 +26,9 @@ Na segunda aula criamos um gerador de figurinhas explorando outras bibliotecas n
  
 # AULA 03
 
- :construction: Em construção :construction:
+A aula 03 foi o momento de pegarmos os filmes do IMDb e gerar figurinhas com os pôsteres, aproveitando para melhorar nosso código com as refatorações necessárias para torná-lo mais flexível e fácil de entender, dessa forma conseguimos adaptar nosso código para receber uma segunda api, a api da NASA !
+
+![M51: The Whirlpool Galaxy from Hubble](https://user-images.githubusercontent.com/59482366/180648023-cf41a266-f784-450c-aafe-5ca949cd108d.png)
 
 # AULA 04
 
