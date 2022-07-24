@@ -24,15 +24,15 @@ public class App {
 
         for (Conteudo conteudo : conteudos) {
 
-            InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
+            InputStream inputStream = new URL(conteudo.urlImagem()).openStream();
 
-            String nomeArquivo = conteudo.getTitulo() + ".png";
+            String nomeArquivo = conteudo.titulo() + ".png";
 
             geradora.create(inputStream, nomeArquivo);
 
 
-            System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", conteudo.getTitulo());
-            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", conteudo.getUrlImagem());
+            System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", conteudo.titulo());
+            System.out.printf("\u001b[1mLINK IMAGEM:.\t\u001b[34m \u001b[3m\u001b[1m%s \u001b[m \n", conteudo.urlImagem());
 
             System.out.println();
         }
