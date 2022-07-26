@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 
 public class GeradoraDeStrickers {
     
-    void create(InputStream inputStream, String nomeArquivo) throws IOException {
+    void create(InputStream inputStream, String nomeArquivo, String mensagem) throws IOException {
 
         // 1. Ler imagem
         BufferedImage ImagemOriginal = ImageIO.read(inputStream);
@@ -26,15 +26,14 @@ public class GeradoraDeStrickers {
         graphics.drawImage(ImagemOriginal, 0, 0, null);
 
         // Configurar a fonte
-        Font fonte = new Font(Font.SANS_SERIF, Font.CENTER_BASELINE, 100);
+        Font fonte = new Font(Font.SANS_SERIF, Font.CENTER_BASELINE, 47);
         graphics.setColor(Color.RED);
         graphics.setFont(fonte);
 
         // 4. Escrever uma frase na nova imagem
-        String frase = "Toopzera";
-        int tamanhoFrase = graphics.getFontMetrics().stringWidth(frase);
+        int tamanhoFrase = graphics.getFontMetrics().stringWidth(mensagem);
         int localFrase = (novaImagem.getWidth() - tamanhoFrase) / 2;
-        graphics.drawString(frase, localFrase, novaAltura - 80);
+        graphics.drawString(mensagem, localFrase, novaAltura - 80);
 
         // 5. Escrever a nova imagem em um arquivo
         String path = "alura-stickers/saida/" + nomeArquivo;

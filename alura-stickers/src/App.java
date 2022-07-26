@@ -31,7 +31,7 @@ public class App {
 
             String nomeArquivo = conteudo.titulo() + ".png";
 
-            geradora.create(inputStream, nomeArquivo);
+            geradora.create(inputStream, nomeArquivo, conteudo.titulo());
 
 
             System.out.printf("TITULO:.\t\u001b[37m \u001b[41m\u001b[3m\u001b[1m %s \u001b[m \n", conteudo.titulo());
