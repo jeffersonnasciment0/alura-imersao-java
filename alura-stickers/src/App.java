@@ -11,8 +11,11 @@ public class App {
 
 
 
-        String url = "https://api.nasa.gov/planetary/apod?api_key=dxy2CsQteqxlZ1Vbvy9ulrM3BHNKgIIUHRfqDcnR&start_date=2022-06-12&end_date=2022-06-14";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        // String url = "https://api.nasa.gov/planetary/apod?api_key=dxy2CsQteqxlZ1Vbvy9ulrM3BHNKgIIUHRfqDcnR&start_date=2022-06-12&end_date=2022-06-14";
+        // ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+
+        String url = "https://linguagens-ap1-alura.herokuapp.com/linguagens";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
        
         ClienteHttp http = new ClienteHttp();
         String json = http.BuscaDados(url);
