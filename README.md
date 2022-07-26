@@ -1,6 +1,4 @@
-<h1 align="center"> Imersão de Java Alura </h1>
-
-![GitHub STATUS](http://img.shields.io/static/v1?label=STATUS&message=PROJETO%20CONCLUIDO&color=GREEN&style=for-the-badge) 🏆
+<h1 align="center"> Imersão de Java Alura </h1> 
 
 ![GitHub license](https://img.shields.io/github/license/jeffersonnasciment0/alura-imersao-java)
 
