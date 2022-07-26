@@ -8,9 +8,12 @@
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-- ``Java 17``
-- ``visual studio code``
-- ``Paradigma de orientação a objetos``
+- ``☕ Java 17.0.3 2022-04-19``
+- ``👨🏽‍💻 visual studio code``
+- ``📚 Paradigma de orientação a objetos``
+- ``🍃 Spring Boot v3.0.0-M4``
+- ``Git 2.25.1``
+- ``heroku 7.60.2``
 
 
 # AULA 01
@@ -39,9 +42,11 @@ Construimos uma API REST para expor nosso próprio conteúdo, utilizando ferrame
  
 # AULA 05
 
-Para fechar com chave de ouro, tornarmos nossa aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem. Além disso, geramos figurinhas a partir do conteúdo dessa nossa API.
+Para fechar com chave de ouro, tornarmos nossa aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem. 
 
 ![api_publica](https://user-images.githubusercontent.com/59482366/180900764-f4070b4a-c45b-4105-bb2d-84a2e73fbe3d.png)
+
+Além disso, geramos figurinhas a partir do conteúdo dessa nossa API.
 
 ![Captura_de_tela](https://user-images.githubusercontent.com/59482366/180901520-33ab47b7-35b6-4126-98a0-ca1ca50fd703.png)
  
@@ -49,9 +54,9 @@ Para fechar com chave de ouro, tornarmos nossa aplicação acessível por qualqu
 
 - `Primeiro`: Abra o terminal no local onde deseja executar o projeto
 - `Segundo`: Execute o seguinte comando: `git clone https://github.com/jeffersonnasciment0/alura-imersao-java.git`
-- `Terceiro`: Execute: `cd alura-imersao-java/alura-stickers/src/`
+- `Terceiro`: Execute: `cd alura-imersao-java/`
 - `Quarto`: Execute: `code .`
-- `Quinto`: Procure por um ícone semelhante a este ▶️ ou então encontre a palavra "run" em cima do main, e pressione.
+- `Quinto`: Procure por um ícone semelhante a este ▶️ ou então encontre a palavra "run" acima do main, e pressione.
 
 E pronto ! 
  
