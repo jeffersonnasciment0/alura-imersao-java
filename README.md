@@ -12,8 +12,8 @@
 - ``👨🏽‍💻 visual studio code``
 - ``📚 Paradigma de orientação a objetos``
 - ``🍃 Spring Boot v3.0.0-M4``
-- ``Git 2.25.1``
-- ``heroku 7.60.2``
+- ``🐈‍⬛ Git 2.25.1``
+- ``🟦 heroku 7.60.2``
 
 
 # AULA 01
@@ -50,6 +50,10 @@ Além disso, geramos figurinhas a partir do conteúdo dessa nossa API.
 
 ![Captura_de_tela](https://user-images.githubusercontent.com/59482366/180901520-33ab47b7-35b6-4126-98a0-ca1ca50fd703.png)
  
+ ## 📁 Acesso ao projeto
+
+Você pode [acessar o código fonte do projeto inicial](https://github.com/jeffersonnasciment0/alura-imersao-java)
+
 ## 🛠️ Abrir e rodar o projeto
 
 - `Primeiro`: Abra o terminal no local onde deseja executar o projeto
