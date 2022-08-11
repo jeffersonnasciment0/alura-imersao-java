@@ -45,6 +45,7 @@ Construimos uma API REST para expor nosso próprio conteúdo, utilizando ferrame
 # AULA 05
 
 Para fechar com chave de ouro, tornarmos nossa aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem. 
+Você pode [acessar o código fonte do projeto](https://github.com/jeffersonnasciment0/linguagens-api)
 
 ![api_publica](https://user-images.githubusercontent.com/59482366/180900764-f4070b4a-c45b-4105-bb2d-84a2e73fbe3d.png)
 
